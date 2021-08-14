@@ -1,0 +1,2 @@
+TF_VAR_discord_token="your_bot_discord_token"
+TF_VAR_discord_server_id="your_existing_guild_id"
