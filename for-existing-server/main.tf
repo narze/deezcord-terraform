@@ -40,7 +40,7 @@ resource discord_role admin {
   // color = data.discord_color.blue.dec
   hoist = true
   mentionable = true
-  position = 0
+  position = 1
 }
 
 // resource discord_server deezcord_server {
@@ -107,3 +107,11 @@ resource discord_text_channel bots {
 // output invite {
 //   value = "https://discord.gg/${discord_invite.welcome.id}"
 // }
+
+// Pulling existing resource with terraform import [resource] [ID]
+
+// terraform import discord_category_channel.text_channels xxxxxxxxxxxxxxxxxxxxx
+resource discord_category_channel text_channels {
+  name = "Text Channels"
+  server_id = data.discord_server.deezcord_server.id
+}
